@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ddd;
+}
+
+.container {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 450px;
+  margin: 100px auto 0;
+  position: relative;
+  width: 730px;
+  background-color: #000;
+}
+
+.slider {
+  /*top: 15px;*/
+  margin: auto;
+  background-color: #ddd;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.container > input {
+  /*скрываем радио-кнопки*/
+  display: none;
+}
+
+.slides {
+  /*padding-top: 15px;*/
+  height: inherit; /*берет значение свойства родит. элемента */
+  position: absolute; /*чтобы можно было играть с эффектами появления*/
+  width: inherit;
+  opacity: 0;
+  z-index: 0;
+  /* делаем, чтобы слайды переключались*/
+  transform: scale(1.5);
+  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+.slide1 {
+  background-image: url(../image/slide1-photo.jpg);
+  /*background-repeat: no-repeat;*/
+}
+
+.slide2 {
+  background-image: url(../image/slide2-photo.jpg);
+  /*background-repeat: no-repeat;*/
+}
+
+.slide3 {
+  background-image: url(../image/slide3-photo.jpg);
+}
+.slide4 {
+  background-image: url(../image/slide4-photo.jpg);
+}
+.slide5 {
+  background-image: url(../image/slide5-photo.jpg);
+}
