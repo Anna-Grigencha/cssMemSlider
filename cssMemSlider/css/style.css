@@ -117,3 +117,38 @@ body {
   z-index: 1;
   transform: scale(1);
 }
+
+.inscriptions {
+  top: -15px;
+  color: #ff7f50;
+  font-size: 20px;
+  /*margin: auto;*/
+  /*background-color: #ddd;*/
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.inscription {
+  height: 50px;
+  position: absolute; /*чтобы можно было играть с эффектами появления*/
+  width: 500px;
+  opacity: 0;
+  z-index: 0;
+  /* делаем, чтобы слайды переключались*/
+  transform: scale(1.5);
+  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+#slide1:checked ~ .inscriptions > .text1,
+#slide2:checked ~ .inscriptions > .text2,
+#slide3:checked ~ .inscriptions > .text3,
+#slide4:checked ~ .inscriptions > .text4,
+#slide5:checked ~ .inscriptions > .text5 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
